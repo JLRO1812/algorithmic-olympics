@@ -8,6 +8,7 @@ public class LinkedListCountry {
 		cabeza = null;
 	}
 	
+	//Add ITERATIVE
 	public void addIterative(long n) {
 		NodoLE newNodo = new NodoLE(n);
 		if(cabeza == null) {
@@ -22,6 +23,7 @@ public class LinkedListCountry {
 		}
 	}
 	
+	//Add RECURSIVE
 	public void addRecursive(long n) {
 		NodoLE newNodo = new NodoLE(n);
 		if(cabeza == null) {
@@ -43,7 +45,7 @@ public class LinkedListCountry {
 		}
 	}
 	
-	
+	//Search ITERATIVE
 	public boolean searchIterative(long n) {
 		if(cabeza!=null){
 			NodoLE aux = cabeza;
@@ -63,6 +65,7 @@ public class LinkedListCountry {
 		}
 	}
 	
+	//Search RECURSIVE
 	public boolean searchRecursive(long n) {
 		if(cabeza!=null) {
 			NodoLE aux = cabeza;
@@ -88,6 +91,7 @@ public class LinkedListCountry {
 		}
 	}
 	
+	//Delete ITERATIVE
 	public boolean deleteIterative(long n) {
 		if(cabeza!=null) {
 			NodoLE aux = cabeza;
@@ -119,6 +123,7 @@ public class LinkedListCountry {
 		}
 	}
 	
+	//Delete RECURSIVE
 	public boolean deleteRecursive(long n) {
 		if(cabeza!=null) {
 			NodoLE aux = cabeza;

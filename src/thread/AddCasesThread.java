@@ -15,7 +15,7 @@ public class AddCasesThread extends Thread{
 	public void run() {
 		arrayListThread.add();
 		linkedListThread.add();
-		//abbThread.add();
+		abbThread.add();
 	}
 	
 }

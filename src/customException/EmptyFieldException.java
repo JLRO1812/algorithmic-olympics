@@ -1,4 +1,4 @@
-package exceptions;
+package customException;
 
 @SuppressWarnings("serial")
 public class EmptyFieldException extends Exception{

@@ -2,7 +2,7 @@ package ui;
 
 import java.io.IOException;
 
-import exceptions.EmptyFieldException;
+import customException.EmptyFieldException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

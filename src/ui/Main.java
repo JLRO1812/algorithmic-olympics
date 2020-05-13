@@ -26,5 +26,4 @@ public class Main extends Application{
 		stage.setTitle("Basic Algorithms Race");
 		stage.show();
 	}
-
 }

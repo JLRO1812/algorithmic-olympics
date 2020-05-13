@@ -59,7 +59,7 @@ public class ControllerThread extends Thread{
 	public void run() {
 		ArrayListThread arrayListThread = new ArrayListThread(method, iterative, n, guiOlympics, progressBarArrayList, progressIndiArrayList);
 		LinkedListThread linkedListThread = new LinkedListThread(method, iterative, n, guiOlympics, progressBarLinkedList, progressIndiLinkedList);
-		ABBThread abbThread = new ABBThread();
+		ABBThread abbThread = new ABBThread(method, iterative, n, guiOlympics, progressBarAbb, progressIndiAbb);
 		
 		if(method.equals(METHOD_SEARCH) || method.equals(METHOD_DELETE)) {
 			AddCasesThread addCasses = new AddCasesThread(arrayListThread, linkedListThread, abbThread);
@@ -92,14 +92,14 @@ public class ControllerThread extends Thread{
 		
 		arrayListThread.start();
 		linkedListThread.start();
-		//abbThread.start();
+		abbThread.start();
 		timeKeeperThread.start();
 		circleThread.start();
 		
 		try {
 			arrayListThread.join();
 			linkedListThread.join();
-			//abbThread.join();
+			abbThread.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
