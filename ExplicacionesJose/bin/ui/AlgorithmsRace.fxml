@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AlgorithmsRaceGUI">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="34.0" layoutY="32.0" style="-fx-background-color: #162447; -fx-border-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;" text=" N:" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtN" layoutX="99.0" layoutY="41.0" prefHeight="32.0" prefWidth="197.0" />
+      <Pane layoutX="49.0" layoutY="123.0" prefHeight="180.0" prefWidth="100.0" style="-fx-border-color: #000000; -fx-background-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;">
+         <children>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="-12.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #162447; -fx-background-radius: 10.0 10.0 10.0 10.0;" text="Algorithm" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="15.0" layoutY="42.0" mnemonicParsing="false" selected="true" text="Add">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="algorithm" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="15.0" layoutY="81.0" mnemonicParsing="false" text="Search" toggleGroup="$algorithm">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="15.0" layoutY="120.0" mnemonicParsing="false" text="Delete" toggleGroup="$algorithm">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Pane layoutX="187.0" layoutY="153.0" prefHeight="120.0" prefWidth="100.0" style="-fx-border-color: #000000; -fx-background-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;">
+         <children>
+            <Label alignment="CENTER" layoutX="12.0" layoutY="-12.0" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #162447; -fx-background-radius: 10.0 10.0 10.0 10.0;" text="Mode" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="7.0" layoutY="40.0" mnemonicParsing="false" selected="true" text="Iterative">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="mode" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="7.0" layoutY="80.0" mnemonicParsing="false" text="Recursive" toggleGroup="$mode">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Pane layoutX="317.0" layoutY="30.0" prefHeight="90.0" prefWidth="270.0" style="-fx-border-color: #000000; -fx-background-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;">
+         <children>
+            <Label alignment="CENTER" layoutX="12.0" layoutY="-12.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #162447; -fx-background-radius: 10.0 10.0 10.0 10.0;" text="Timekeeper" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="timekeeper" layoutX="14.0" layoutY="29.0" prefHeight="42.0" prefWidth="118.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEFE;" text="00:00:000" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT" size="27.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circleBig" fill="#3d6d9a" layoutX="202.0" layoutY="45.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circleSmall" fill="#4d5961" layoutX="202.0" layoutY="45.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane layoutX="317.0" layoutY="166.0" prefHeight="216.0" prefWidth="270.0" style="-fx-border-color: #000000; -fx-background-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;">
+         <children>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="-12.0" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #162447; -fx-background-radius: 10.0 10.0 10.0 10.0;" text="Final Results" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeArrayList" layoutX="14.0" layoutY="122.0" prefHeight="25.0" prefWidth="64.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEFE;" text="00:00:000" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeABB" layoutX="192.0" layoutY="122.0" prefHeight="25.0" prefWidth="64.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEFE;" text="00:00:000" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLinkedList" layoutX="102.0" layoutY="122.0" prefHeight="25.0" prefWidth="64.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEFE;" text="00:00:000" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="97.0" prefHeight="25.0" prefWidth="64.0" text="ArrayList" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="98.0" layoutY="97.0" prefHeight="25.0" prefWidth="74.0" text="LinkedList" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="192.0" layoutY="97.0" prefHeight="25.0" prefWidth="64.0" text="ABB" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ArrayList.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="192.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ABB.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="102.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LinkedList.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="progressIndiAL" layoutX="35.0" layoutY="162.0" progress="0.0" />
+            <ProgressIndicator fx:id="progressIndiLE" layoutX="124.0" layoutY="162.0" progress="0.0" />
+            <ProgressIndicator fx:id="progressIndiABB" layoutX="213.0" layoutY="162.0" progress="0.0" />
+         </children>
+      </Pane>
+      <ProgressBar fx:id="progressBarAL" layoutX="111.0" layoutY="400.0" prefHeight="30.0" prefWidth="387.0" progress="0.0" />
+      <ProgressBar fx:id="progressBarABB" layoutX="111.0" layoutY="500.0" prefHeight="30.0" prefWidth="387.0" progress="0.0" />
+      <ProgressBar fx:id="progressBarLE" layoutX="111.0" layoutY="450.0" prefHeight="30.0" prefWidth="387.0" progress="0.0" />
+      <Button fx:id="runButton" layoutX="231.0" layoutY="547.0" mnemonicParsing="false" onAction="#run" prefHeight="30.0" prefWidth="139.0" style="-fx-background-radius: 10.0 10.0 10.0 10.0;" text="=====RUN=====">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="38.0" layoutY="390.0" text="AL:" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="440.0" text="LE:" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="490.0" text="ABB:" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="operationsAL" layoutX="504.0" layoutY="400.0" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="operationsLE" layoutX="504.0" layoutY="451.0" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="operationsABB" layoutX="504.0" layoutY="501.0" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="resetButtom" disable="true" layoutX="531.0" layoutY="537.0" mnemonicParsing="false" onAction="#reset" prefHeight="50.0" prefWidth="34.0" style="-fx-background-radius: 10.0 10.0 10.0 10.0;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
