@@ -172,17 +172,17 @@
             <Font name="Calisto MT Bold" size="37.0" />
          </font>
       </Label>
-      <Label fx:id="operationsAL" layoutX="504.0" layoutY="400.0" textFill="WHITE">
+      <Label fx:id="operationsAL" layoutX="504.0" layoutY="400.0" style="-fx-background-color: #162447; -fx-border-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;" textFill="WHITE">
          <font>
             <Font name="Calisto MT Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="operationsLE" layoutX="504.0" layoutY="451.0" textFill="WHITE">
+      <Label fx:id="operationsLE" layoutX="504.0" layoutY="451.0" style="-fx-background-color: #162447; -fx-border-color: #dae1e7; -fx-background-radius: 10.0 10.0 10.0 10.0; -fx-border-radius: 10.0 10.0 10.0 10.0;" textFill="WHITE">
          <font>
             <Font name="Calisto MT Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="operationsABB" layoutX="504.0" layoutY="501.0" textFill="WHITE">
+      <Label fx:id="operationsABB" layoutX="504.0" layoutY="501.0" style="-fx-background-color: #162447; -fx-border-color: #dae1e7; -fx-border-radius: 10.0 10.0 10.0 10.0; -fx-background-radius: 10.0 10.0 10.0 10.0;" textFill="WHITE">
          <font>
             <Font name="Calisto MT Bold" size="20.0" />
          </font>
